@@ -23,6 +23,7 @@ import com.google.android.libraries.places.api.model.Place
 import com.google.android.libraries.places.api.net.FetchPhotoRequest
 import com.google.android.libraries.places.api.net.FetchPlaceRequest
 import com.google.android.libraries.places.api.net.PlacesClient
+import com.raywenderlich.placebook.BuildConfig
 import com.raywenderlich.placebook.R
 import com.raywenderlich.placebook.adapter.BookmarkInfoWindowAdapter
 import com.raywenderlich.placebook.databinding.ActivityMapsBinding
@@ -80,10 +81,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         placesClient.fetchPlace(request)
             .addOnSuccessListener { response ->
                 val place = response.place
-                Toast.makeText(this,
-                    "${place.name}, " +
-                            place.phoneNumber,
-                    Toast.LENGTH_LONG).show()
+                displayPoiGetPhotoStep(place)
             }.addOnFailureListener { exception ->
                 if (exception is ApiException) {
                     val statusCode = exception.statusCode
@@ -97,7 +95,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private fun setupPlacesClient() {
         Places.initialize(applicationContext,
-            getString(R.string.google_maps_key))
+            BuildConfig.MAPS_API_KEY)
         placesClient = Places.createClient(this)
     }
 
@@ -144,7 +142,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         requestCode: Int,
         permissions: Array<String>,
         grantResults: IntArray) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        //super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == REQUEST_LOCATION) {
             if (grantResults.size == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 getCurrentLocation()
