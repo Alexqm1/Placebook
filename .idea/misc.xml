@@ -3,8 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/default_photo.xml" value="0.1635" />
+        <entry key="app/src/main/res/drawable/ic_other.xml" value="0.1635" />
+        <entry key="app/src/main/res/layout/activity_bookmark_details.xml" value="0.2558876811594203" />
         <entry key="app/src/main/res/layout/activity_maps.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/bookmark_item.xml" value="0.15416666666666667" />
         <entry key="app/src/main/res/layout/content_bookmark_info.xml" value="0.1962962962962963" />
+        <entry key="app/src/main/res/layout/drawer_view_maps.xml" value="0.15416666666666667" />
+        <entry key="app/src/main/res/layout/main_view_maps.xml" value="0.15416666666666667" />
+        <entry key="app/src/main/res/menu/menu_bookmark_details.xml" value="0.15520833333333334" />
+        <entry key="app/src/main/res/xml/file_paths.xml" value="0.15520833333333334" />
       </map>
     </option>
   </component>
