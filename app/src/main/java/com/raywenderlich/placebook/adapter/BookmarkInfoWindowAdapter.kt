@@ -2,6 +2,7 @@ package com.raywenderlich.placebook.adapter
 
 import android.app.Activity
 import android.view.View
+import android.widget.ImageView
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.Marker
 
@@ -51,4 +52,8 @@ class BookmarkInfoWindowAdapter(val context: Activity) : GoogleMap.InfoWindowAda
         }
         return binding.root
     }
+}
+
+private fun ImageView.setImageBitmap(image: Unit?) {
+
 }

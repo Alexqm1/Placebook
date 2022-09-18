@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <drawable name="ic_action_done" />
+    <drawable name="ic_search_white" />
     <drawable name="default_photo" />
+    <drawable name="ic_gas">ic_gas</drawable>
+    <drawable name="ic_lodging">ic_lodging</drawable>
+    <drawable name="ic_restaurant">ic_restaurant</drawable>
+    <drawable name="ic_shopping">ic_shopping</drawable>
 </resources>

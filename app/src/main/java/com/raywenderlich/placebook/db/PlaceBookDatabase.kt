@@ -27,4 +27,5 @@ abstract class PlaceBookDatabase : RoomDatabase() {
 // 7
             return instance as PlaceBookDatabase
         }
-    } }
+    }
+}

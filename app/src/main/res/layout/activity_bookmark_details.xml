@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
@@ -126,32 +127,35 @@
         app:layout_constraintStart_toEndOf="@+id/barrier1"
         app:layout_constraintTop_toBottomOf="@+id/imageViewPlace" />
     <com.google.android.material.textfield.TextInputEditText
-        android:text="@{bookmarkDetailsView.notes}"
+        android:id="@+id/editTextNotes"
         style="@style/BookmarkEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/enter_notes"
+        android:text="@{bookmarkDetailsView.notes}"
         android:layout_marginStart="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/barrier1"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerCategory" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
     <com.google.android.material.textfield.TextInputEditText
-        android:text="@{bookmarkDetailsView.phone}"
+        android:id="@+id/editTextPhone"
         style="@style/BookmarkEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/phone_number"
+        android:text="@{bookmarkDetailsView.phone}"
         android:layout_marginStart="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/barrier1"
         app:layout_constraintTop_toBottomOf="@+id/editTextNotes" />
     <com.google.android.material.textfield.TextInputEditText
-        android:text="@{bookmarkDetailsView.address}"
+        android:id="@+id/editTextAddress"
         style="@style/BookmarkEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/address"
         android:inputType="textMultiLine"
+        android:text="@{bookmarkDetailsView.address}"
         android:layout_marginStart="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/barrier1"
@@ -170,7 +174,6 @@
         android:id="@+id/spinnerCategory"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight='1.4'
         android:layout_marginTop="16dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
